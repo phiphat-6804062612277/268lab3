@@ -1,26 +1,21 @@
 #include <stdio.h>
-int main(){
-    int h,m,s,im;
-    scanf("%d:%d:%d",&h,&m,&s);
-    printf("hour:%d\nminute:%d\nsecond:%d",h,m,s);
-    printf("\nNext minutes:");
-    scanf("%d",&im);
-    if (im > 120){
-        printf("error");
-        return 0;
-    }
-    int cami = m + im;
-    if (cami >= 120){
-        h = h + 2;
-        cami = cami - 120;
-    }
-    else if (cami > 59 && cami < 120){
-        h = h + 1 ;
-        cami = cami - 60 ;
-    }
-    if (h > 23){
-        h = h - 24 ;
-    }
-    printf("\nhour:%d\nminute:%d\nsecond:%d",h,cami,s);
-    return 0;
+int main() {
+	int month;
+	scanf("%d",&month);
+	switch (month) {
+		case 12 : printf("Winter"); break;
+		case 1	: printf("Winter"); break;
+		case 2	: printf("Winter"); break;
+		case 3  : printf("Spring"); break;
+		case 4	: printf("Spring"); break;
+		case 5	: printf("Spring"); break;
+		case 6  : printf("Summer"); break;
+		case 7	: printf("Summer"); break;
+		case 8	: printf("Summer"); break;
+		case 9  : printf("Autumn"); break;
+		case 10	: printf("Autumn"); break;
+		case 11	: printf("Autumn"); break;
+		default : printf("No season");
+	}
+return 0;
 }
